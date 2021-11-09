@@ -5,7 +5,6 @@
 //  Created by Mateus Santos on 09/11/21.
 //
 
-
 import UIKit
 import SnapKit
 
@@ -95,7 +94,6 @@ class LoginViewController : UIViewController {
             make.bottom.equalTo(view.layoutMarginsGuide).inset(5)
             make.centerX.equalToSuperview()
         }
-        
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
