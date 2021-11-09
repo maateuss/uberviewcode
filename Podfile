@@ -17,8 +17,13 @@ target 'UberCloneFirebase' do
 	pod 'JGProgressHUD', '~>2.0.3'
 	pod 'YPImagePicker'
   pod 'IQKeyboardManagerSwift'
-	pod 'Quick'
-	pod 'Nimble'
+end
+
+
+target 'UberCloneFirebaseTests' do
+  inherit! :search_paths
+  pod 'Quick'
+  pod 'Nimble'
 end
 
 
