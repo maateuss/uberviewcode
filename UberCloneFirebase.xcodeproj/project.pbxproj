@@ -13,6 +13,7 @@
 		27320391273AA12B009A54B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27320390273AA12B009A54B5 /* Assets.xcassets */; };
 		27320394273AA12B009A54B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27320392273AA12B009A54B5 /* LaunchScreen.storyboard */; };
 		2732039E273AA1DD009A54B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732039D273AA1DD009A54B5 /* MainViewController.swift */; };
+		D77496449B54497D26F207E5 /* Pods_UberCloneFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912AFD4FC53452D4E96C966D /* Pods_UberCloneFirebase.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		27320393273AA12B009A54B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27320395273AA12B009A54B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2732039D273AA1DD009A54B5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		912AFD4FC53452D4E96C966D /* Pods_UberCloneFirebase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UberCloneFirebase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B556A47622B2431C10FF9F0 /* Pods-UberCloneFirebase.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneFirebase.debug.xcconfig"; path = "Target Support Files/Pods-UberCloneFirebase/Pods-UberCloneFirebase.debug.xcconfig"; sourceTree = "<group>"; };
+		A76E5DCE5966B3E8C13E1B61 /* Pods-UberCloneFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneFirebase.release.xcconfig"; path = "Target Support Files/Pods-UberCloneFirebase/Pods-UberCloneFirebase.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77496449B54497D26F207E5 /* Pods_UberCloneFirebase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				27320386273AA126009A54B5 /* UberCloneFirebase */,
 				27320385273AA126009A54B5 /* Products */,
+				8C21F0045DDDA17F70D3037A /* Pods */,
+				284BF9B06FCDCB57CF43475B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -75,6 +82,24 @@
 			path = Main;
 			sourceTree = "<group>";
 		};
+		284BF9B06FCDCB57CF43475B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				912AFD4FC53452D4E96C966D /* Pods_UberCloneFirebase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8C21F0045DDDA17F70D3037A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9B556A47622B2431C10FF9F0 /* Pods-UberCloneFirebase.debug.xcconfig */,
+				A76E5DCE5966B3E8C13E1B61 /* Pods-UberCloneFirebase.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -82,9 +107,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 27320398273AA12B009A54B5 /* Build configuration list for PBXNativeTarget "UberCloneFirebase" */;
 			buildPhases = (
+				3FD9346B8196DB5452AE8FE3 /* [CP] Check Pods Manifest.lock */,
 				27320380273AA126009A54B5 /* Sources */,
 				27320381273AA126009A54B5 /* Frameworks */,
 				27320382273AA126009A54B5 /* Resources */,
+				7960DC397147F3B03B7E7C43 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -139,6 +166,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FD9346B8196DB5452AE8FE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-UberCloneFirebase-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7960DC397147F3B03B7E7C43 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberCloneFirebase/Pods-UberCloneFirebase-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-UberCloneFirebase/Pods-UberCloneFirebase-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-UberCloneFirebase/Pods-UberCloneFirebase-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		27320380273AA126009A54B5 /* Sources */ = {
@@ -284,6 +353,7 @@
 		};
 		27320399273AA12B009A54B5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B556A47622B2431C10FF9F0 /* Pods-UberCloneFirebase.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -311,6 +381,7 @@
 		};
 		2732039A273AA12B009A54B5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A76E5DCE5966B3E8C13E1B61 /* Pods-UberCloneFirebase.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
