@@ -505,6 +505,7 @@ PODS:
   - SDWebImage (4.4.8):
     - SDWebImage/Core (= 4.4.8)
   - SDWebImage/Core (4.4.8)
+  - SnapKit (5.0.1)
   - SteviaLayout (4.7.3)
   - YPImagePicker (4.5.0):
     - PryntTrimmerView (~> 4.0.2)
@@ -522,6 +523,7 @@ DEPENDENCIES:
   - Nimble
   - Quick
   - SDWebImage (~> 4.4.2)
+  - SnapKit
   - YPImagePicker
 
 SPEC REPOS:
@@ -553,6 +555,7 @@ SPEC REPOS:
     - PryntTrimmerView
     - Quick
     - SDWebImage
+    - SnapKit
     - SteviaLayout
     - YPImagePicker
 
@@ -584,9 +587,10 @@ SPEC CHECKSUMS:
   PryntTrimmerView: 6a43cc90df5d99addeabd33d4ba09b1365322130
   Quick: 6473349e43b9271a8d43839d9ba1c442ed1b7ac4
   SDWebImage: 783af2c3fa36291a250030c4752ee370a9a51d13
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   YPImagePicker: 6f410f475bd22fa8cd430495b54d4b2f15865c2d
 
-PODFILE CHECKSUM: 02b5851b1c50eda22051ad7ec8335bb53f9b9d2a
+PODFILE CHECKSUM: 9a3d429ea976b9649a409ebb1f4c66777f695a38
 
 COCOAPODS: 1.10.2

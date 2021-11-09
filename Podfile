@@ -6,8 +6,9 @@ target 'UberCloneFirebase' do
   use_frameworks!
 
   # Pods for UberCloneFirebase
-  	pod 'Firebase/Core'
-	pod 'Firebase/Auth'
+  pod 'SnapKit'
+  pod 'Firebase/Core'
+  pod 'Firebase/Auth'
 	pod 'Firebase/Database'
 	pod 'Firebase/Storage'
 	pod 'Firebase/Messaging'
@@ -15,7 +16,7 @@ target 'UberCloneFirebase' do
 	pod 'SDWebImage', '~>4.4.2'
 	pod 'JGProgressHUD', '~>2.0.3'
 	pod 'YPImagePicker'
-  	pod 'IQKeyboardManagerSwift'
+  pod 'IQKeyboardManagerSwift'
 	pod 'Quick'
 	pod 'Nimble'
 end
