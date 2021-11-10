@@ -8,12 +8,18 @@
 import UIKit
 import SnapKit
 
+protocol CustomTextFieldDelegate : AnyObject {
+    func didFinishEditing(_: CustomTextField, value: String)
+}
+
 class CustomTextField : UIView {
     
     // MARK: - Properties
     let image: UIImage?
     let placeholder: String?
     let isPassword: Bool
+    
+    weak var delegate: CustomTextFieldDelegate?
     
     lazy var icon : UIImageView = {
         let iv = UIImageView(image: image)
@@ -32,6 +38,7 @@ class CustomTextField : UIView {
                 attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.8)])
         }
         tf.textColor = .white
+        tf.addTarget(self, action: #selector(handleTextChanged), for: .editingChanged)
         return tf
     }()
     
@@ -74,7 +81,14 @@ class CustomTextField : UIView {
             make.right.equalToSuperview()
         }
         
-        
+    }
+    
+    
+    @objc func handleTextChanged(){
+        guard let delegate = delegate, let input = textInput.text else {
+            return
+        }
+        delegate.didFinishEditing(self, value: input)
     }
     
 }

@@ -10,7 +10,7 @@ import SnapKit
 
 class LoginViewController : UIViewController {
     
-    
+        
     // MARK: - Properties
     
     lazy var titleLabel: UILabel = {
