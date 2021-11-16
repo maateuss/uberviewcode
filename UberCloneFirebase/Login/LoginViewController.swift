@@ -13,6 +13,8 @@ class LoginViewController : UIViewController {
         
     // MARK: - Properties
     
+    weak var router : LoginRouterLogic?
+    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "UBER"
@@ -37,6 +39,9 @@ class LoginViewController : UIViewController {
         var attributedText = NSMutableAttributedString(string: "Don't have an account? ", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)])
         attributedText.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemBlue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]))
         label.attributedText = attributedText
+        label.isUserInteractionEnabled = true
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(handleSignUpPressed))
+        label.addGestureRecognizer(gesture)
         return label
     }()
     
@@ -50,6 +55,9 @@ class LoginViewController : UIViewController {
     }()
     
     // MARK: - Lifecycle
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -95,6 +103,18 @@ class LoginViewController : UIViewController {
             make.centerX.equalToSuperview()
         }
     }
+    
+    // MARK: - Actions
+    
+    @objc func handleSignUpPressed(){
+        guard let router = router else {
+            return
+        }
+        
+        router.showSignUpPage(navController: navigationController)
+    }
+    
+    // MARK: - Statusbar Style
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
