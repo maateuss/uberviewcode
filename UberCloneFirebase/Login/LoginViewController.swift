@@ -36,7 +36,7 @@ class LoginViewController : UIViewController {
     lazy var signInText: UIButton = {
         let button = UIButton(type: .system)
         var attributedText = NSMutableAttributedString(string: "Don't have an account? ", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)])
-        attributedText.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemBlue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]))
+        attributedText.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.foregroundColor : UIColor.mainBlueTint, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]))
         button.setAttributedTitle(attributedText, for: .normal)
         button.addTarget(self, action: #selector(handleSignUpPressed), for: .touchUpInside)
         return button
@@ -44,7 +44,7 @@ class LoginViewController : UIViewController {
     
     lazy var loginButton: UIButton = {
         let btn = UIButton(type: .system)
-        btn.backgroundColor = .systemBlue
+        btn.backgroundColor = .mainBlueTint
         btn.setTitleColor(.white, for: .normal)
         btn.setAttributedTitle(NSAttributedString(string: "Log In", attributes: [NSAttributedString.Key.font :UIFont.boldSystemFont(ofSize: 20)]), for: .normal)
         btn.layer.cornerRadius = 5
@@ -69,7 +69,7 @@ class LoginViewController : UIViewController {
     }
     
     func configureUI(){
-        view.backgroundColor = .backgroundBlack()
+        view.backgroundColor = .backgroundBlack
         
         view.addSubview(titleLabel)
         titleLabel.snp.makeConstraints{ (make) -> Void in

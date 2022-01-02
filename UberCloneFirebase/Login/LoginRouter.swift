@@ -9,12 +9,17 @@ import UIKit
 
 protocol LoginRouterLogic : AnyObject {
     func showSignUpPage(navController: UINavigationController?)
+    func backToLoginPage(navController: UINavigationController?)
     
 }
 
 class LoginRouter : LoginRouterLogic {
     func showSignUpPage(navController: UINavigationController?) {
-        navController?.pushViewController(SignupViewController(), animated: true)
+        navController?.pushViewController(LoginFactory.makeSignupController(), animated: true)
+    }
+    
+    func backToLoginPage(navController: UINavigationController?) {
+        navController?.popViewController(animated: true)
     }
 }
 

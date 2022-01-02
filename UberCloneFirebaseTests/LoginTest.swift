@@ -12,6 +12,7 @@ import Nimble
 class LoginTest: QuickSpec {
     var routerSpy: LoginRouterSpy?
     var loginViewController: LoginViewController?
+    var signupViewController: SignupViewController?
     var navigationController: UINavigationController?
     
     override func spec(){
@@ -22,13 +23,26 @@ class LoginTest: QuickSpec {
                     self.loginViewController = LoginViewController()
                     self.loginViewController?.router = self.routerSpy
                 }
-                it("raise navigation on router"){
+                it("raise signup on router"){
                     self.loginViewController?.handleSignUpPressed()
                     expect(self.routerSpy?.signupPageCalled == true)
                 }
+            
                 
             }
             
+        }
+        describe("SignupViewController"){
+            context("When clicking signup, navigation to signup page is raised"){
+                it("back to login with router"){
+                    self.routerSpy = LoginRouterSpy()
+                    self.signupViewController = SignupViewController()
+                    self.signupViewController?.router = self.routerSpy
+                    self.signupViewController?.viewDidLoad()
+                    self.signupViewController?.handleLoginPressed()
+                    expect(self.routerSpy?.loginPageCalled == true)
+                }
+            }
         }
         describe("LoginRouter"){
             context("When raised showsignuppage, signupViewController is shown"){

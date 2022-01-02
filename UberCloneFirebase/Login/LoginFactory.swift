@@ -12,9 +12,14 @@ class LoginFactory {
     static func makeLoginController() -> UIViewController{
         let loginVC = LoginViewController()
         let router = LoginRouter()
-       
         loginVC.router = router
-    
         return loginVC
+    }
+    
+    static func makeSignupController() -> UIViewController {
+        let signupVC = SignupViewController()
+        let router = LoginRouter()
+        signupVC.router = router
+        return signupVC
     }
 }

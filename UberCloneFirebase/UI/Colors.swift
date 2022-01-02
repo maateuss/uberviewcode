@@ -8,7 +8,10 @@
 import UIKit
 
 extension UIColor {
-    static func backgroundBlack() -> UIColor { return UIColor(hex: "#191919ff") ?? .black }
+    static let backgroundBlack = UIColor(hex: "#191919ff") ?? .black
+
+    static let mainBlueTint = UIColor(hex: "#119aedff") ?? .systemBlue
+    
 }
 
 extension UIColor {
