@@ -9,9 +9,12 @@ import Foundation
 import UIKit
 
 class LoginFactory {
-    static func makeLoginController(router:LoginRouter = LoginRouter()) -> UIViewController{
+    static func makeLoginController() -> UIViewController{
         let loginVC = LoginViewController()
+        let router = LoginRouter()
+       
         loginVC.router = router
+    
         return loginVC
     }
 }

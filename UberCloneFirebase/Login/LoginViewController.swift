@@ -13,7 +13,7 @@ class LoginViewController : UIViewController {
         
     // MARK: - Properties   
     
-    weak var router : LoginRouterLogic?
+    var router : LoginRouterLogic?
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
