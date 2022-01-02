@@ -21,6 +21,7 @@
 		273203D4273AFE2E009A54B5 /* CustomComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273203D3273AFE2E009A54B5 /* CustomComponentsTest.swift */; };
 		D77496449B54497D26F207E5 /* Pods_UberCloneFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912AFD4FC53452D4E96C966D /* Pods_UberCloneFirebase.framework */; };
 		FC232229278211BF00ED8175 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232228278211BE00ED8175 /* LoginFactory.swift */; };
+		FC23222B278241B600ED8175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC23222A278241B600ED8175 /* GoogleService-Info.plist */; };
 		FC3B2B3827722B69002E9C66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B2B3727722B69002E9C66 /* SignupViewController.swift */; };
 		FCEEDA75273FEEAC00AA7337 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */; };
 		FCEEDA7A273FF2A400AA7337 /* LoginRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */; };
@@ -59,6 +60,7 @@
 		A76E5DCE5966B3E8C13E1B61 /* Pods-UberCloneFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneFirebase.release.xcconfig"; path = "Target Support Files/Pods-UberCloneFirebase/Pods-UberCloneFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		E3DEC27B67F012D1352D688D /* libPods-UberCloneFirebaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UberCloneFirebaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC232228278211BE00ED8175 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		FC23222A278241B600ED8175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FC3B2B3727722B69002E9C66 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterSpy.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		27320386273AA126009A54B5 /* UberCloneFirebase */ = {
 			isa = PBXGroup;
 			children = (
+				FC23222A278241B600ED8175 /* GoogleService-Info.plist */,
 				273203CC273AB6A7009A54B5 /* UI */,
 				2732039F273AA902009A54B5 /* Login */,
 				2732039C273AA1C8009A54B5 /* Main */,
@@ -275,6 +278,7 @@
 			files = (
 				27320394273AA12B009A54B5 /* LaunchScreen.storyboard in Resources */,
 				27320391273AA12B009A54B5 /* Assets.xcassets in Resources */,
+				FC23222B278241B600ED8175 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

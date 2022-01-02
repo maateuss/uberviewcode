@@ -72,7 +72,7 @@ class CustomTextField : UIView {
         }
         
         let divider = UIView()
-        divider.backgroundColor = .white
+        divider.backgroundColor = .darkGray
         addSubview(divider)
         divider.snp.makeConstraints { make in
             make.top.equalTo(textInput.snp.bottom).offset(10)

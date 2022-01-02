@@ -33,7 +33,8 @@ class SignupViewController : UIViewController {
     }()
     
     lazy var passwordField: CustomTextField = {
-        let ctf = CustomTextField(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), placeholder: "Password")
+        let ctf = CustomTextField(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), placeholder: "Password", isPassword: true)
+        
         return ctf
     }()
 

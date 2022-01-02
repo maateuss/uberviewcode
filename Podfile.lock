@@ -429,6 +429,12 @@ PODS:
   - FirebaseStorage (8.7.0):
     - FirebaseCore (~> 8.0)
     - GTMSessionFetcher/Core (~> 1.5)
+  - GeoFire (4.3.0):
+    - GeoFire/Database (= 4.3.0)
+  - GeoFire/Database (4.3.0):
+    - Firebase/Database (< 9.0.0, > 7.0.0)
+    - GeoFire/Utils
+  - GeoFire/Utils (4.3.0)
   - GoogleAppMeasurement (8.7.0):
     - GoogleAppMeasurement/AdIdSupport (= 8.7.0)
     - GoogleUtilities/AppDelegateSwizzler (~> 7.4)
@@ -518,6 +524,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Firebase/Messaging
   - Firebase/Storage
+  - GeoFire (>= 1.1)
   - IQKeyboardManagerSwift
   - JGProgressHUD (~> 2.0.3)
   - Nimble
@@ -540,6 +547,7 @@ SPEC REPOS:
     - FirebaseInstallations
     - FirebaseMessaging
     - FirebaseStorage
+    - GeoFire
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
@@ -572,6 +580,7 @@ SPEC CHECKSUMS:
   FirebaseInstallations: ede6fb72bb6337914e5888b399271259d0c4910c
   FirebaseMessaging: 93227dd71d7888e200baef65043f81acb2b6596e
   FirebaseStorage: 2e6e58fe31fb0061fdce3f156d0ebc964e9de6ba
+  GeoFire: c34927b5c81ab614f611c79aa8d074cfa9780f07
   GoogleAppMeasurement: 2be61ce546ad074dbe4dd545f222ac6033bb1d9e
   GoogleDataTransport: 85fd18ff3019bb85d3f2c551d04c481dedf71fc9
   GoogleUtilities: 8de2a97a17e15b6b98e38e8770e2d129a57c0040
@@ -591,6 +600,6 @@ SPEC CHECKSUMS:
   SteviaLayout: c2ecdcff57d44e38fd2f65e54ad52aeae28ca0c4
   YPImagePicker: 6f410f475bd22fa8cd430495b54d4b2f15865c2d
 
-PODFILE CHECKSUM: 57a6afd3902b977cc5fb90ee06fabe5b7b8ea121
+PODFILE CHECKSUM: 03f5d0797faaad27c3e56d91ff506c2e55acc3e7
 
 COCOAPODS: 1.11.2

@@ -17,6 +17,7 @@ target 'UberCloneFirebase' do
 	pod 'JGProgressHUD', '~>2.0.3'
 	pod 'YPImagePicker'
   pod 'IQKeyboardManagerSwift'
+  pod 'GeoFire', '>= 1.1'
 end
 
 
