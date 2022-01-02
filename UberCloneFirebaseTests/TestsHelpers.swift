@@ -5,7 +5,7 @@
 //  Created by Mateus Moura Santos on 16/11/21.
 //
 
-import Foundation
+import UIKit
 
 class MockNavigationController: UINavigationController {
     override func pushViewController(_ viewController: UIViewController, animated: Bool) {

@@ -11,7 +11,7 @@ import SnapKit
 class LoginViewController : UIViewController {
     
         
-    // MARK: - Properties
+    // MARK: - Properties   
     
     weak var router : LoginRouterLogic?
     
@@ -33,16 +33,13 @@ class LoginViewController : UIViewController {
         return ctf
     }()
     
-    lazy var signInText: UILabel = {
-        let label = UILabel()
-        label.textAlignment = .center
+    lazy var signInText: UIButton = {
+        let button = UIButton(type: .system)
         var attributedText = NSMutableAttributedString(string: "Don't have an account? ", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white, NSAttributedString.Key.font: UIFont.systemFont(ofSize: 20)])
         attributedText.append(NSAttributedString(string: "Sign Up", attributes: [NSAttributedString.Key.foregroundColor : UIColor.systemBlue, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]))
-        label.attributedText = attributedText
-        label.isUserInteractionEnabled = true
-        let gesture = UITapGestureRecognizer(target: self, action: #selector(handleSignUpPressed))
-        label.addGestureRecognizer(gesture)
-        return label
+        button.setAttributedTitle(attributedText, for: .normal)
+        button.addTarget(self, action: #selector(handleSignUpPressed), for: .touchUpInside)
+        return button
     }()
     
     lazy var loginButton: UIButton = {
@@ -51,19 +48,26 @@ class LoginViewController : UIViewController {
         btn.setTitleColor(.white, for: .normal)
         btn.setAttributedTitle(NSAttributedString(string: "Log In", attributes: [NSAttributedString.Key.font :UIFont.boldSystemFont(ofSize: 20)]), for: .normal)
         btn.layer.cornerRadius = 5
+        
+        btn.addTarget(self, action: #selector(handleLoginPressed), for: .touchUpInside)
+        
         return btn
     }()
     
     // MARK: - Lifecycle
    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
+        configureNavigationBar()
     }
     
     // MARK: - Helpers
+    func configureNavigationBar(){
+        navigationController?.navigationBar.isHidden = true
+        navigationController?.navigationBar.barStyle = .black
+    }
+    
     func configureUI(){
         view.backgroundColor = .backgroundBlack()
         
@@ -107,12 +111,23 @@ class LoginViewController : UIViewController {
     // MARK: - Actions
     
     @objc func handleSignUpPressed(){
+        
+        print("DEBUG: Signup Pressed!!")
+        
         guard let router = router else {
             return
         }
         
         router.showSignUpPage(navController: navigationController)
     }
+    
+    @objc func handleLoginPressed(){
+        print("DEBUG: Login Pressed!")
+        
+        
+        
+    }
+    
     
     // MARK: - Statusbar Style
     

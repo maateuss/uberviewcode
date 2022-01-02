@@ -10,7 +10,6 @@
 		0BF518B04A2FCE7EC632B572 /* libPods-UberCloneFirebaseTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DEC27B67F012D1352D688D /* libPods-UberCloneFirebaseTests.a */; };
 		27320388273AA126009A54B5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27320387273AA126009A54B5 /* AppDelegate.swift */; };
 		2732038A273AA126009A54B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27320389273AA126009A54B5 /* SceneDelegate.swift */; };
-		2732038C273AA126009A54B5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732038B273AA126009A54B5 /* ViewController.swift */; };
 		27320391273AA12B009A54B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27320390273AA12B009A54B5 /* Assets.xcassets */; };
 		27320394273AA12B009A54B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27320392273AA12B009A54B5 /* LaunchScreen.storyboard */; };
 		2732039E273AA1DD009A54B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732039D273AA1DD009A54B5 /* MainViewController.swift */; };
@@ -21,6 +20,8 @@
 		273203D2273ABD87009A54B5 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273203D1273ABD87009A54B5 /* CustomTextField.swift */; };
 		273203D4273AFE2E009A54B5 /* CustomComponentsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273203D3273AFE2E009A54B5 /* CustomComponentsTest.swift */; };
 		D77496449B54497D26F207E5 /* Pods_UberCloneFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912AFD4FC53452D4E96C966D /* Pods_UberCloneFirebase.framework */; };
+		FC232229278211BF00ED8175 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232228278211BE00ED8175 /* LoginFactory.swift */; };
+		FC3B2B3827722B69002E9C66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B2B3727722B69002E9C66 /* SignupViewController.swift */; };
 		FCEEDA75273FEEAC00AA7337 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */; };
 		FCEEDA7A273FF2A400AA7337 /* LoginRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */; };
 		FCEEDA7C2743F00E00AA7337 /* TestsHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA7B2743F00E00AA7337 /* TestsHelpers.swift */; };
@@ -41,7 +42,6 @@
 		27320384273AA126009A54B5 /* UberCloneFirebase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberCloneFirebase.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27320387273AA126009A54B5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27320389273AA126009A54B5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2732038B273AA126009A54B5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		27320390273AA12B009A54B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27320393273AA12B009A54B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27320395273AA12B009A54B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +58,8 @@
 		9BD37472FC5373D016595461 /* Pods-UberCloneFirebaseTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneFirebaseTests.release.xcconfig"; path = "Target Support Files/Pods-UberCloneFirebaseTests/Pods-UberCloneFirebaseTests.release.xcconfig"; sourceTree = "<group>"; };
 		A76E5DCE5966B3E8C13E1B61 /* Pods-UberCloneFirebase.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UberCloneFirebase.release.xcconfig"; path = "Target Support Files/Pods-UberCloneFirebase/Pods-UberCloneFirebase.release.xcconfig"; sourceTree = "<group>"; };
 		E3DEC27B67F012D1352D688D /* libPods-UberCloneFirebaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UberCloneFirebaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC232228278211BE00ED8175 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
+		FC3B2B3727722B69002E9C66 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterSpy.swift; sourceTree = "<group>"; };
 		FCEEDA7B2743F00E00AA7337 /* TestsHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsHelpers.swift; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 				2732039C273AA1C8009A54B5 /* Main */,
 				27320387273AA126009A54B5 /* AppDelegate.swift */,
 				27320389273AA126009A54B5 /* SceneDelegate.swift */,
-				2732038B273AA126009A54B5 /* ViewController.swift */,
 				27320390273AA12B009A54B5 /* Assets.xcassets */,
 				27320392273AA12B009A54B5 /* LaunchScreen.storyboard */,
 				27320395273AA12B009A54B5 /* Info.plist */,
@@ -133,6 +134,8 @@
 				FCEEDA76273FF26D00AA7337 /* Spy */,
 				273203A0273AADFF009A54B5 /* LoginViewController.swift */,
 				FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */,
+				FC3B2B3727722B69002E9C66 /* SignupViewController.swift */,
+				FC232228278211BE00ED8175 /* LoginFactory.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -353,9 +356,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2732038C273AA126009A54B5 /* ViewController.swift in Sources */,
 				FCEEDA7A273FF2A400AA7337 /* LoginRouterSpy.swift in Sources */,
+				FC3B2B3827722B69002E9C66 /* SignupViewController.swift in Sources */,
 				27320388273AA126009A54B5 /* AppDelegate.swift in Sources */,
+				FC232229278211BF00ED8175 /* LoginFactory.swift in Sources */,
 				2732038A273AA126009A54B5 /* SceneDelegate.swift in Sources */,
 				273203D0273ABAB3009A54B5 /* Colors.swift in Sources */,
 				273203D2273ABD87009A54B5 /* CustomTextField.swift in Sources */,

@@ -14,7 +14,7 @@ protocol LoginRouterLogic : AnyObject {
 
 class LoginRouter : LoginRouterLogic {
     func showSignUpPage(navController: UINavigationController?) {
-        print("open signup here")
+        navController?.pushViewController(SignupViewController(), animated: true)
     }
 }
 
