@@ -9,11 +9,20 @@ import Foundation
 import UIKit
 
 
+protocol LoginBusinessLogic {
+    func didTryLogin(request: LoginModel)
+    func didTrySignup(request: SignupModel)
+}
 
+protocol LoginRepositoryLogic {
+    func createUser(request: SignupModel, completion: @escaping (Result<Bool, Error>) -> Void)
+    func login(request: LoginModel, completion: @escaping(Result<Bool, Error>) -> Void)
+}
 
-
-
-
+protocol LoginDisplayLogic{
+    func presentAlert()
+    func goToMain()
+}
 
 class LoginFactory {
     static func makeLoginController() -> UIViewController{

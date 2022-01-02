@@ -22,6 +22,9 @@
 		D77496449B54497D26F207E5 /* Pods_UberCloneFirebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 912AFD4FC53452D4E96C966D /* Pods_UberCloneFirebase.framework */; };
 		FC232229278211BF00ED8175 /* LoginFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232228278211BE00ED8175 /* LoginFactory.swift */; };
 		FC23222B278241B600ED8175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FC23222A278241B600ED8175 /* GoogleService-Info.plist */; };
+		FC23222D2782470800ED8175 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC23222C2782470800ED8175 /* LoginInteractor.swift */; };
+		FC23222F27824DA200ED8175 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC23222E27824DA200ED8175 /* LoginModels.swift */; };
+		FC23223127824F1000ED8175 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC23223027824F1000ED8175 /* LoginWorker.swift */; };
 		FC3B2B3827722B69002E9C66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B2B3727722B69002E9C66 /* SignupViewController.swift */; };
 		FCEEDA75273FEEAC00AA7337 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */; };
 		FCEEDA7A273FF2A400AA7337 /* LoginRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */; };
@@ -61,6 +64,9 @@
 		E3DEC27B67F012D1352D688D /* libPods-UberCloneFirebaseTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UberCloneFirebaseTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC232228278211BE00ED8175 /* LoginFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginFactory.swift; sourceTree = "<group>"; };
 		FC23222A278241B600ED8175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FC23222C2782470800ED8175 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
+		FC23222E27824DA200ED8175 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
+		FC23223027824F1000ED8175 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
 		FC3B2B3727722B69002E9C66 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterSpy.swift; sourceTree = "<group>"; };
@@ -139,6 +145,9 @@
 				FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */,
 				FC3B2B3727722B69002E9C66 /* SignupViewController.swift */,
 				FC232228278211BE00ED8175 /* LoginFactory.swift */,
+				FC23222C2782470800ED8175 /* LoginInteractor.swift */,
+				FC23222E27824DA200ED8175 /* LoginModels.swift */,
+				FC23223027824F1000ED8175 /* LoginWorker.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -368,7 +377,10 @@
 				273203D0273ABAB3009A54B5 /* Colors.swift in Sources */,
 				273203D2273ABD87009A54B5 /* CustomTextField.swift in Sources */,
 				FCEEDA75273FEEAC00AA7337 /* LoginRouter.swift in Sources */,
+				FC23222D2782470800ED8175 /* LoginInteractor.swift in Sources */,
+				FC23223127824F1000ED8175 /* LoginWorker.swift in Sources */,
 				273203A1273AAE00009A54B5 /* LoginViewController.swift in Sources */,
+				FC23222F27824DA200ED8175 /* LoginModels.swift in Sources */,
 				273203CE273AB6C4009A54B5 /* UIFont+Extensions.swift in Sources */,
 				2732039E273AA1DD009A54B5 /* MainViewController.swift in Sources */,
 			);
