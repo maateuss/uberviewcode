@@ -34,6 +34,7 @@ struct UserModel : Codable {
     let name: String
     let email: String
     let type: UserType
+    let uid: String
 }
 
 struct SignupModel : Codable {
@@ -56,4 +57,14 @@ enum UserType : String, Codable {
         case driver = "driver"
         case rider = "rider"
     }
+    
+    func asString() -> String {
+        switch self {
+        case .driver:
+            return "driver"
+        case .rider:
+            return "rider"
+        }
+    }
+    
 }
