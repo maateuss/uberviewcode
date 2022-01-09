@@ -19,23 +19,45 @@ protocol LoginRepositoryLogic {
     func login(request: LoginModel, completion: @escaping(Result<Bool, Error>) -> Void)
 }
 
-protocol LoginDisplayLogic{
+protocol LoginDisplayLogic : class {
     func presentAlert()
+    func presentCustomAlert(message: String)
     func goToMain()
 }
+
+protocol LoginPresentationLogic {
+    var viewController: LoginDisplayLogic? { get }
+    func presentError()
+    func presentCustomError(message: String)
+}
+
 
 class LoginFactory {
     static func makeLoginController() -> UIViewController{
         let loginVC = LoginViewController()
         let router = LoginRouter()
+        let presenter = LoginPresentation()
+        let worker = LoginWorker()
+        let interactor = LoginInteractor(worker: worker, presentation: presenter)
         loginVC.router = router
+        loginVC.interactor = interactor
+        interactor.presenter = presenter
+        presenter.viewController = loginVC
+        interactor.worker = worker
         return loginVC
     }
     
     static func makeSignupController() -> UIViewController {
         let signupVC = SignupViewController()
         let router = LoginRouter()
+        let presenter = LoginPresentation()
+        let worker = LoginWorker()
+        let interactor = LoginInteractor(worker: worker, presentation: presenter)
+        
         signupVC.router = router
+        signupVC.interactor = interactor
+        interactor.presenter = presenter
+        presenter.viewController = signupVC
         return signupVC
     }
 }

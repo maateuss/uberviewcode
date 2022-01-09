@@ -11,10 +11,12 @@ import SnapKit
 class LoginViewController : UIViewController {
     
         
-    // MARK: - Properties   
+    // MARK: - Properties
     
+    
+    var viewModel: LoginViewModel = LoginViewModel()
     var router : LoginRouterLogic?
-    
+    var interactor : LoginBusinessLogic?
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.text = "UBER"
@@ -25,11 +27,13 @@ class LoginViewController : UIViewController {
     
     lazy var emailField: CustomTextField = {
         let ctf = CustomTextField(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x.png"), placeholder: "Email")
+        ctf.delegate = self
         return ctf
     }()
     
     lazy var passwordField: CustomTextField = {
         let ctf = CustomTextField(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), placeholder: "Password", isPassword: true)
+        ctf.delegate = self
         return ctf
     }()
     
@@ -122,10 +126,12 @@ class LoginViewController : UIViewController {
     }
     
     @objc func handleLoginPressed(){
-        print("DEBUG: Login Pressed!")
+        guard let email = viewModel.email, let password = viewModel.password else {
+            return
+        }
         
-        
-        
+        let loginModel = LoginModel(email: email, password: password)
+        interactor?.didTryLogin(request: loginModel)
     }
     
     
@@ -138,3 +144,26 @@ class LoginViewController : UIViewController {
     
 }
 
+extension LoginViewController : LoginDisplayLogic {
+    func presentCustomAlert(message: String) {
+        CustomAlert.makeOkAlert(self, message: message)
+    }
+    
+    func presentAlert() {
+        CustomAlert.makeOkAlert(self, message: "Um erro ocorreu")
+    }
+    
+    func goToMain() {
+        // go to main menu
+    }
+}
+
+extension LoginViewController : CustomTextFieldDelegate {
+    func didFinishEditing(field: CustomTextField, value: String) {
+        if field == self.emailField {
+            self.viewModel.email = value
+        } else if field == self.passwordField {
+            self.viewModel.password = value
+        }
+    }
+}

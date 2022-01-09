@@ -10,7 +10,7 @@ import Foundation
 class LoginWorker : LoginRepositoryLogic {
     func createUser(request: SignupModel, completion: @escaping (Result<Bool, Error>) -> Void) {
         if true {
-            completion(.success(true))
+            completion(.success(false))
         } else{
             completion(.failure(LoginError.NetworkError))
         }
@@ -18,7 +18,7 @@ class LoginWorker : LoginRepositoryLogic {
     
     func login(request: LoginModel, completion: @escaping (Result<Bool, Error>) -> Void) {
         if true {
-            completion(.success(true))
+            completion(.success(false))
         } else{
             completion(.failure(LoginError.NetworkError))
         }

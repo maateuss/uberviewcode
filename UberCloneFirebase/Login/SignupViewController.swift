@@ -13,6 +13,8 @@ class SignupViewController : UIViewController {
     // MARK: - Properties
     
     var router: LoginRouterLogic?
+    var viewModel: SignupViewModel = SignupViewModel()
+    var interactor : LoginBusinessLogic?
     
     lazy var titleLabel: UILabel = {
        var label = UILabel()
@@ -24,17 +26,19 @@ class SignupViewController : UIViewController {
     
     lazy var emailField: CustomTextField = {
         let ctf = CustomTextField(image: #imageLiteral(resourceName: "ic_mail_outline_white_2x.png"), placeholder: "Email")
+        ctf.delegate = self
         return ctf
     }()
     
     lazy var nameField: CustomTextField = {
         let ctf = CustomTextField(image: #imageLiteral(resourceName: "ic_person_outline_white_2x"), placeholder: "Name")
+        ctf.delegate = self
         return ctf
     }()
     
     lazy var passwordField: CustomTextField = {
         let ctf = CustomTextField(image: #imageLiteral(resourceName: "ic_lock_outline_white_2x"), placeholder: "Password", isPassword: true)
-        
+        ctf.delegate = self
         return ctf
     }()
 
@@ -49,7 +53,6 @@ class SignupViewController : UIViewController {
     
     lazy var segmentedControl: UISegmentedControl = {
         let segmentedControl = UISegmentedControl(items: ["User", "Driver"])
-        segmentedControl.addTarget(self, action: #selector(handleSegmentChanged), for: .valueChanged)
         segmentedControl.backgroundColor = .darkGray
         segmentedControl.selectedSegmentIndex = 0
         return segmentedControl
@@ -166,23 +169,59 @@ class SignupViewController : UIViewController {
     }
     
     // MARK: - Actions
-    
-    @objc func handleSegmentChanged(){
-        print("DEBUG: SegmentControl changed!! newValue: \(segmentedControl.selectedSegmentIndex)")
-        
-    }
+  
     
     @objc func handleSignUpPressed(){
-        print("DEBUG: SignUPPressed!")
+        
+        self.viewModel.userType = segmentedControl.selectedSegmentIndex == 1 ? .driver : .rider
+        
+        guard let name = self.viewModel.name,
+              let email = self.viewModel.email,
+              let password = self.viewModel.password,
+              let userType = self.viewModel.userType else {
+            return
+        }
+        
+        let signupModel = SignupModel(name: name, email: email, password: password, type: userType)
+        
+        self.interactor?.didTrySignup(request: signupModel)
+        
     }
 
     @objc func handleLoginPressed(){
-        print("DEBUG: Login pressed!")
         
         guard let router = router else {
             return
         }
         
         router.backToLoginPage(navController: navigationController)
+    }
+}
+
+extension SignupViewController : LoginDisplayLogic {
+    func presentCustomAlert(message: String) {
+        CustomAlert.makeOkAlert(self, message: message)
+    }
+    
+    func presentAlert() {
+        CustomAlert.makeOkAlert(self, message: "Um erro ocorreu")
+    }
+    
+    func goToMain() {
+        // go to main menu
+    }
+    
+    
+}
+
+extension SignupViewController : CustomTextFieldDelegate {
+    func didFinishEditing(field: CustomTextField, value: String) {
+        if field == self.emailField {
+            self.viewModel.email = value
+        } else if field == self.nameField {
+            self.viewModel.name = value
+        } else if field == self.passwordField {
+            self.viewModel.password = value
+        }
     }
 }

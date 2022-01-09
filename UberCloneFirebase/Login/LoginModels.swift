@@ -7,9 +7,27 @@
 
 import Foundation
 
+struct LoginViewModel {
+    var email: String?
+    var password: String?
+}
+
+struct SignupViewModel {
+    var email: String?
+    var name: String?
+    var password: String?
+    var userType: UserType?
+    
+}
+
+
 struct LoginModel : Codable {
     let email : String
     let password : String
+    init(email: String, password: String){
+        self.email = email
+        self.password = password
+    }
 }
 
 struct UserModel : Codable {

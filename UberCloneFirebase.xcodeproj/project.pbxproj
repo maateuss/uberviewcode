@@ -25,6 +25,8 @@
 		FC23222D2782470800ED8175 /* LoginInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC23222C2782470800ED8175 /* LoginInteractor.swift */; };
 		FC23222F27824DA200ED8175 /* LoginModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC23222E27824DA200ED8175 /* LoginModels.swift */; };
 		FC23223127824F1000ED8175 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC23223027824F1000ED8175 /* LoginWorker.swift */; };
+		FC232233278B576B00ED8175 /* LoginPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232232278B576B00ED8175 /* LoginPresentation.swift */; };
+		FC232235278B87F000ED8175 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232234278B87F000ED8175 /* CustomAlert.swift */; };
 		FC3B2B3827722B69002E9C66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B2B3727722B69002E9C66 /* SignupViewController.swift */; };
 		FCEEDA75273FEEAC00AA7337 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */; };
 		FCEEDA7A273FF2A400AA7337 /* LoginRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */; };
@@ -67,6 +69,8 @@
 		FC23222C2782470800ED8175 /* LoginInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInteractor.swift; sourceTree = "<group>"; };
 		FC23222E27824DA200ED8175 /* LoginModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModels.swift; sourceTree = "<group>"; };
 		FC23223027824F1000ED8175 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
+		FC232232278B576B00ED8175 /* LoginPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentation.swift; sourceTree = "<group>"; };
+		FC232234278B87F000ED8175 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
 		FC3B2B3727722B69002E9C66 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterSpy.swift; sourceTree = "<group>"; };
@@ -97,7 +101,6 @@
 			isa = PBXGroup;
 			children = (
 				27320386273AA126009A54B5 /* UberCloneFirebase */,
-				273203C1273AB439009A54B5 /* UberCloneFirebaseTests */,
 				27320385273AA126009A54B5 /* Products */,
 				8C21F0045DDDA17F70D3037A /* Pods */,
 				284BF9B06FCDCB57CF43475B /* Frameworks */,
@@ -124,6 +127,7 @@
 				27320389273AA126009A54B5 /* SceneDelegate.swift */,
 				27320390273AA12B009A54B5 /* Assets.xcassets */,
 				27320392273AA12B009A54B5 /* LaunchScreen.storyboard */,
+				273203C1273AB439009A54B5 /* UberCloneFirebaseTests */,
 				27320395273AA12B009A54B5 /* Info.plist */,
 			);
 			path = UberCloneFirebase;
@@ -148,6 +152,7 @@
 				FC23222C2782470800ED8175 /* LoginInteractor.swift */,
 				FC23222E27824DA200ED8175 /* LoginModels.swift */,
 				FC23223027824F1000ED8175 /* LoginWorker.swift */,
+				FC232232278B576B00ED8175 /* LoginPresentation.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -168,6 +173,7 @@
 				273203CD273AB6C4009A54B5 /* UIFont+Extensions.swift */,
 				273203CF273ABAB3009A54B5 /* Colors.swift */,
 				273203D1273ABD87009A54B5 /* CustomTextField.swift */,
+				FC232234278B87F000ED8175 /* CustomAlert.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -371,6 +377,7 @@
 			files = (
 				FCEEDA7A273FF2A400AA7337 /* LoginRouterSpy.swift in Sources */,
 				FC3B2B3827722B69002E9C66 /* SignupViewController.swift in Sources */,
+				FC232233278B576B00ED8175 /* LoginPresentation.swift in Sources */,
 				27320388273AA126009A54B5 /* AppDelegate.swift in Sources */,
 				FC232229278211BF00ED8175 /* LoginFactory.swift in Sources */,
 				2732038A273AA126009A54B5 /* SceneDelegate.swift in Sources */,
@@ -383,6 +390,7 @@
 				FC23222F27824DA200ED8175 /* LoginModels.swift in Sources */,
 				273203CE273AB6C4009A54B5 /* UIFont+Extensions.swift in Sources */,
 				2732039E273AA1DD009A54B5 /* MainViewController.swift in Sources */,
+				FC232235278B87F000ED8175 /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -600,6 +608,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 693GW5K6SQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/Nimble\"",
+					"\"${PODS_ROOT}/Headers/Public/Quick\"",
+					"\"${SRCROOT}/Pods/Firebase/CoreOnly/Sources\"",
+				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -609,7 +625,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.msantos.UberCloneFirebaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "UberCloneFirebaseTests/UberCloneFirebaseTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "UberCloneFirebase/UberCloneFirebaseTests/UberCloneFirebaseTests-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -627,6 +643,14 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 693GW5K6SQ;
 				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/Firebase\"",
+					"\"${PODS_ROOT}/Headers/Public/Nimble\"",
+					"\"${PODS_ROOT}/Headers/Public/Quick\"",
+					"\"${SRCROOT}/Pods/Firebase/CoreOnly/Sources\"",
+				);
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,7 +660,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.msantos.UberCloneFirebaseTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "UberCloneFirebaseTests/UberCloneFirebaseTests-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "UberCloneFirebase/UberCloneFirebaseTests/UberCloneFirebaseTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/UberCloneFirebase.app/UberCloneFirebase";

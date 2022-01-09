@@ -10,21 +10,44 @@ import Foundation
 class LoginInteractor : LoginBusinessLogic {
     
     
-    private let worker: LoginRepositoryLogic
-    private let presentation: LoginDisplayLogic
+    var worker: LoginRepositoryLogic
+    var presenter: LoginPresentationLogic
     
-    
-    init(worker: LoginRepositoryLogic, presentation: LoginDisplayLogic){
+    init(worker: LoginRepositoryLogic, presentation: LoginPresentationLogic){
         self.worker = worker
-        self.presentation = presentation
+        self.presenter = presentation
     }
     
     func didTryLogin(request: LoginModel) {
-        print("Debug: Handle login in Interactor")
+        self.worker.login(request: request) { result  in
+            switch result {
+            case let .success(loginAttempt):
+                if loginAttempt {
+                    // go to main
+                } else {
+                    self.presenter.presentCustomError(message: "Usuario ou senha invalidos")
+                }
+            case let .failure(err):
+                print(err.localizedDescription)
+                self.presenter.presentError()
+            }
+        }
         
     }
     
     func didTrySignup(request: SignupModel) {
-        print("Debug: Handle Signup in Interactor")
+        self.worker.createUser(request: request) { result in
+            switch result {
+            case let .success(created):
+                if created {
+                    // go to main?
+                } else {
+                    self.presenter.presentCustomError(message: "Não foi possível criar um usuário com esses valores")
+                }
+            case let .failure(err):
+                print(err.localizedDescription)
+                self.presenter.presentError()
+            }
+        }
     }
 }

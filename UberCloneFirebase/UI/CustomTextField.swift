@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 
 protocol CustomTextFieldDelegate : AnyObject {
-    func didFinishEditing(_: CustomTextField, value: String)
+    func didFinishEditing(field: CustomTextField, value: String)
 }
 
 class CustomTextField : UIView {
@@ -88,7 +88,7 @@ class CustomTextField : UIView {
         guard let delegate = delegate, let input = textInput.text else {
             return
         }
-        delegate.didFinishEditing(self, value: input)
+        delegate.didFinishEditing(field: self, value: input)
     }
     
 }
