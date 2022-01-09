@@ -8,6 +8,9 @@
 import Foundation
 import UIKit
 
+protocol LoginJourney : AnyObject {
+    func didFinishLoginJourney()
+}
 
 protocol LoginBusinessLogic {
     func didTryLogin(request: LoginModel)
@@ -19,7 +22,7 @@ protocol LoginRepositoryLogic {
     func login(request: LoginModel, completion: @escaping(Result<Bool, Error>) -> Void)
 }
 
-protocol LoginDisplayLogic : class {
+protocol LoginDisplayLogic : AnyObject {
     func presentAlert()
     func presentCustomAlert(message: String)
     func goToMain()
@@ -34,9 +37,10 @@ protocol LoginPresentationLogic {
 
 
 class LoginFactory {
-    static func makeLoginController() -> UIViewController{
+    static func makeLoginController(delegate: LoginJourney?) -> UIViewController{
         let loginVC = LoginViewController()
         let router = LoginRouter()
+        router.delegate = delegate
         let presenter = LoginPresentation()
         let worker = LoginWorker()
         let interactor = LoginInteractor(worker: worker, presentation: presenter)

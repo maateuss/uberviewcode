@@ -14,8 +14,12 @@ protocol LoginRouterLogic : AnyObject {
 }
 
 class LoginRouter : LoginRouterLogic {
+    
+    weak var delegate: LoginJourney?
+    
     func goToMainMenu(navController: UINavigationController?) {
         navController?.popToRootViewController(animated: true)
+        delegate?.didFinishLoginJourney()
     }
     
     func showSignUpPage(navController: UINavigationController?) {
