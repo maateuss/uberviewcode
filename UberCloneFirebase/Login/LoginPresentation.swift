@@ -22,4 +22,8 @@ final class LoginPresentation : LoginPresentationLogic {
         self.viewController?.presentCustomAlert(message: message)
     }
     
+    func presentMain() {
+        self.viewController?.goToMain()
+    }
+    
 }

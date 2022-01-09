@@ -23,7 +23,7 @@ class LoginInteractor : LoginBusinessLogic {
             switch result {
             case let .success(loginAttempt):
                 if loginAttempt {
-                    // go to main
+                    self.presenter.presentMain()
                 } else {
                     self.presenter.presentCustomError(message: "Usuario ou senha invalidos")
                 }
@@ -40,7 +40,7 @@ class LoginInteractor : LoginBusinessLogic {
             switch result {
             case let .success(created):
                 if created {
-                    // go to main?
+                    self.presenter.presentMain()
                 } else {
                     self.presenter.presentCustomError(message: "Não foi possível criar um usuário com esses valores")
                 }

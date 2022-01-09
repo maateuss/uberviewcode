@@ -12,7 +12,6 @@
 		2732038A273AA126009A54B5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27320389273AA126009A54B5 /* SceneDelegate.swift */; };
 		27320391273AA12B009A54B5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27320390273AA12B009A54B5 /* Assets.xcassets */; };
 		27320394273AA12B009A54B5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27320392273AA12B009A54B5 /* LaunchScreen.storyboard */; };
-		2732039E273AA1DD009A54B5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2732039D273AA1DD009A54B5 /* MainViewController.swift */; };
 		273203A1273AAE00009A54B5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273203A0273AADFF009A54B5 /* LoginViewController.swift */; };
 		273203CB273AB484009A54B5 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273203CA273AB484009A54B5 /* LoginTest.swift */; };
 		273203CE273AB6C4009A54B5 /* UIFont+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 273203CD273AB6C4009A54B5 /* UIFont+Extensions.swift */; };
@@ -27,6 +26,8 @@
 		FC23223127824F1000ED8175 /* LoginWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC23223027824F1000ED8175 /* LoginWorker.swift */; };
 		FC232233278B576B00ED8175 /* LoginPresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232232278B576B00ED8175 /* LoginPresentation.swift */; };
 		FC232235278B87F000ED8175 /* CustomAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232234278B87F000ED8175 /* CustomAlert.swift */; };
+		FC232237278B9E0F00ED8175 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232236278B9E0F00ED8175 /* HomeViewController.swift */; };
+		FC232239278B9EC300ED8175 /* HomeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC232238278B9EC300ED8175 /* HomeFactory.swift */; };
 		FC3B2B3827722B69002E9C66 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3B2B3727722B69002E9C66 /* SignupViewController.swift */; };
 		FCEEDA75273FEEAC00AA7337 /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */; };
 		FCEEDA7A273FF2A400AA7337 /* LoginRouterSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */; };
@@ -51,7 +52,6 @@
 		27320390273AA12B009A54B5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		27320393273AA12B009A54B5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		27320395273AA12B009A54B5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2732039D273AA1DD009A54B5 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		273203A0273AADFF009A54B5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		273203C0273AB439009A54B5 /* UberCloneFirebaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UberCloneFirebaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		273203CA273AB484009A54B5 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
@@ -71,6 +71,8 @@
 		FC23223027824F1000ED8175 /* LoginWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWorker.swift; sourceTree = "<group>"; };
 		FC232232278B576B00ED8175 /* LoginPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresentation.swift; sourceTree = "<group>"; };
 		FC232234278B87F000ED8175 /* CustomAlert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAlert.swift; sourceTree = "<group>"; };
+		FC232236278B9E0F00ED8175 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		FC232238278B9EC300ED8175 /* HomeFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeFactory.swift; sourceTree = "<group>"; };
 		FC3B2B3727722B69002E9C66 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		FCEEDA74273FEEAC00AA7337 /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		FCEEDA79273FF2A400AA7337 /* LoginRouterSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouterSpy.swift; sourceTree = "<group>"; };
@@ -122,7 +124,7 @@
 				FC23222A278241B600ED8175 /* GoogleService-Info.plist */,
 				273203CC273AB6A7009A54B5 /* UI */,
 				2732039F273AA902009A54B5 /* Login */,
-				2732039C273AA1C8009A54B5 /* Main */,
+				2732039C273AA1C8009A54B5 /* Home */,
 				27320387273AA126009A54B5 /* AppDelegate.swift */,
 				27320389273AA126009A54B5 /* SceneDelegate.swift */,
 				27320390273AA12B009A54B5 /* Assets.xcassets */,
@@ -133,12 +135,13 @@
 			path = UberCloneFirebase;
 			sourceTree = "<group>";
 		};
-		2732039C273AA1C8009A54B5 /* Main */ = {
+		2732039C273AA1C8009A54B5 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				2732039D273AA1DD009A54B5 /* MainViewController.swift */,
+				FC232236278B9E0F00ED8175 /* HomeViewController.swift */,
+				FC232238278B9EC300ED8175 /* HomeFactory.swift */,
 			);
-			path = Main;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		2732039F273AA902009A54B5 /* Login */ = {
@@ -384,12 +387,13 @@
 				273203D0273ABAB3009A54B5 /* Colors.swift in Sources */,
 				273203D2273ABD87009A54B5 /* CustomTextField.swift in Sources */,
 				FCEEDA75273FEEAC00AA7337 /* LoginRouter.swift in Sources */,
+				FC232239278B9EC300ED8175 /* HomeFactory.swift in Sources */,
 				FC23222D2782470800ED8175 /* LoginInteractor.swift in Sources */,
 				FC23223127824F1000ED8175 /* LoginWorker.swift in Sources */,
+				FC232237278B9E0F00ED8175 /* HomeViewController.swift in Sources */,
 				273203A1273AAE00009A54B5 /* LoginViewController.swift in Sources */,
 				FC23222F27824DA200ED8175 /* LoginModels.swift in Sources */,
 				273203CE273AB6C4009A54B5 /* UIFont+Extensions.swift in Sources */,
-				2732039E273AA1DD009A54B5 /* MainViewController.swift in Sources */,
 				FC232235278B87F000ED8175 /* CustomAlert.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

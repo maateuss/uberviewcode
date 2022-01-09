@@ -29,6 +29,7 @@ protocol LoginPresentationLogic {
     var viewController: LoginDisplayLogic? { get }
     func presentError()
     func presentCustomError(message: String)
+    func presentMain()
 }
 
 

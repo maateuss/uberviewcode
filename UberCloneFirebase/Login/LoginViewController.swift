@@ -154,7 +154,7 @@ extension LoginViewController : LoginDisplayLogic {
     }
     
     func goToMain() {
-        // go to main menu
+        self.router?.goToMainMenu(navController: self.navigationController)
     }
 }
 

@@ -208,7 +208,7 @@ extension SignupViewController : LoginDisplayLogic {
     }
     
     func goToMain() {
-        // go to main menu
+        router?.goToMainMenu(navController: self.navigationController)
     }
     
     

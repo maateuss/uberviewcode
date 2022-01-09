@@ -8,6 +8,10 @@
 import UIKit
 
 class LoginRouterSpy : LoginRouterLogic {
+    func goToMainMenu(navController: UINavigationController?) {
+        goToMainCalled = true
+    }
+    
     func backToLoginPage(navController: UINavigationController?) {
         loginPageCalled = true
     }
@@ -18,5 +22,6 @@ class LoginRouterSpy : LoginRouterLogic {
     
     var signupPageCalled = false
     var loginPageCalled = false
+    var goToMainCalled = false
     
 }
